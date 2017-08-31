@@ -13,7 +13,7 @@ tables = soup.find_all('table')
 # Get and format timestamp from first table.
 raw_datetime = tables[2].get_text()
 date = re.search(r'(\d+).(\d+).(\d+)', raw_datetime)
-time = re.search(r'(\d\d)\s(\d\d)', raw_datetime)
+time = re.search(r'(\d+)\s(\d+)', raw_datetime)
 
 # Create datetime object from data, not very pretty..
 timestamp = datetime.datetime(
