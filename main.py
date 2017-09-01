@@ -47,15 +47,15 @@ data_old = {}
 
 # Check if file exists
 if Path.is_file(Path(filename)):
-    
-    
+
+
     # Load excel, each sheet to separate dataframe and create Panel
     excel_data = pd.read_excel(filename, sheetname=None, header=0, index_col=0)
     excel_data = pd.Panel(excel_data)
 
-    for sheet in table_base:
+    for sheet in excel_data:
         data_old[sheet] = excel_data[sheet].append(data_current[sheet])
-    
+
     data_current = pd.Panel(data_old)
 
 data_merged = data_current
