@@ -15,7 +15,8 @@ y_booths = excel_data['active_booths']['Evidence vozidel'].tolist()
 p = figure(
     title="Wait time for Evidence vozidel at MeU Cernosice", 
     x_axis_label="Time", x_axis_type="datetime",
-    y_axis_label="mins/people/booths")
+    y_axis_label="mins/people/booths",
+    width=1200)
 
 #for col in excel_data['wait_time']:
 #    y = excel_data['wait_time'][col]
